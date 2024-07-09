@@ -20,6 +20,7 @@
   background: rgba(255, 255, 255, 0.6156862745);
   padding: 10px 30px;
   border-radius: 40px;
+  z-index: 100;
 }
 .header .logo-container {
   display: flex;
@@ -62,6 +63,7 @@
   height: 100vh;
   width: auto;
   overflow: hidden;
+  position: relative;
 }
 .hero .hero-container {
   width: 100%;
@@ -74,4 +76,22 @@
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+.hero .hero-recipe {
+  position: absolute;
+  top: 50%;
+  left: 3%;
+  transform: translate(0, -50%);
+  width: 40%;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.6156862745);
+  padding: 30px;
+  border-radius: 5px;
+}
+.hero .hero-recipe h2 {
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.hero .hero-recipe p {
+  font-size: 1.2rem;
 }/*# sourceMappingURL=style.css.map */
