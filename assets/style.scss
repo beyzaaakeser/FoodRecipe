@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Playwrite+AT:ital,wght@0,100..400;1,100..400&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Exo 2", sans-serif;
+  text-decoration: none;
+}
+
+.header {
+  position: fixed;
+  top: 10px;
+  left: 50%;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: auto;
+  width: 80%;
+  background: #ffffff9d;
+  padding: 10px 30px;
+  border-radius: 40px;
+
+  .logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    h2{
+        margin: 0;
+        font-size: 25px;
+        letter-spacing: 3px;
+        margin-top: 5px;
+        font-family: "Playwrite AT", cursive;
+    }
+    color: rgb(73, 73, 73);
+    .logo {
+      .bx {
+        font-size: 40px;
+        color: crimson;
+      }
+    }
+  }
+
+  .search-form {
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 30%;
+    .search-input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 40px;
+      outline: none;
+      border: 1px solid  rgb(73, 73, 73);
+    }
+
+    .bx {
+      position: absolute;
+      right: 10px;
+      color: crimson;
+      font-size: 25px;
+    }
+  }
+}
+
+.hero {
+  height: 100vh;
+  width: auto;
+  overflow: hidden;
+  .hero-container {
+    width: 100%;
+    height: 100%;
+
+    .hero-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+    }
+  }
+}
