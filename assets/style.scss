@@ -7,20 +7,29 @@
   text-decoration: none;
 }
 
+body {
+  background-color: #ffffff;
+  color: rgb(83, 83, 83);
+}
+
+.container {
+  max-width: 80%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
 .header {
-  position: fixed;
-  top: 10px;
-  left: 50%;
-  transform: translate(-50%);
+  margin-top: 10px !important;
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: auto;
-  width: 80%;
-  background: #ffffff9d;
+  width: 85%;
   padding: 10px 30px;
   border-radius: 40px;
-  z-index: 100;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   .logo-container {
     display: flex;
     align-items: center;
@@ -64,38 +73,175 @@
 }
 
 .hero {
-  height: 100vh;
-  width: auto;
   overflow: hidden;
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  h2 {
+    margin: 30px 0;
+    font-size: 35px;
+    color: rgb(73, 73, 73);
+  }
   .hero-container {
-    width: 100%;
+    display: flex;
     height: 100%;
 
-    .hero-img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      object-position: center center;
+    .hero-image {
+      width: 500px;
+      height: 500px;
+      display: flex;
+      position: relative;
+      &::before {
+        content: '';
+        display: block;
+        width: 200px;
+        height: 200px;
+        background-color: crimson;
+        border-radius: 10px;
+        position: absolute;
+        z-index: -1;
+      }
+      .hero-img {
+        height: 90%;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 10px 100px 10px 10px;
+        margin-left: 25px;
+        margin-top: 25px;
+      }
     }
   }
 
   .hero-recipe {
-    position: absolute;
-    top: 50%;
-    left: 3%;
-    transform: translate(0,-50%);
-    width: 40%;
-    text-align: center;
+    width: 100%;
     background: #ffffff9d;
     padding: 30px;
     border-radius: 5px;
-    h2{
-        margin-bottom: 20px;
-        font-size: 30px;
+    padding: 0 30px;
+    h3 {
+      margin-bottom: 20px;
+      font-size: 30px;
+
+      color: crimson;
     }
-    p{
-        font-size: 1.2rem;
+    p {
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 5;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      padding-right: 30px;
+      line-height: 2rem;
+      font-size: 18px;
+    }
+  }
+
+  .day-info {
+    display: flex;
+    gap: 50px;
+    margin: 30px 0;
+    font-weight: 500;
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 5px;
+      .bx {
+        font-size: 20px;
+        color: crimson;
+      }
+    }
+  }
+
+  .day-buttons {
+    display: flex;
+    gap: 30px;
+
+    .animated-button {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+      padding: 8px 36px;
+      border: 4px solid;
+      border-color: transparent;
+      font-size: 16px;
+      background-color: inherit;
+      border-radius: 100px;
+      font-weight: 500;
+      color: rgb(73, 73, 73);
+      box-shadow: 0 0 0 1px crimson;
+      cursor: pointer;
+      overflow: hidden;
+      transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button svg {
+      position: absolute;
+      width: 24px;
+      fill: crimson;
+      z-index: 9;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .arr-1 {
+      right: 16px;
+    }
+
+    .animated-button .arr-2 {
+      left: -25%;
+    }
+
+    .animated-button .circle {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20px;
+      height: 20px;
+      background-color: crimson;
+      border-radius: 50%;
+      opacity: 0;
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button .text {
+      position: relative;
+      z-index: 1;
+      transform: translateX(-12px);
+      transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    .animated-button:hover {
+      box-shadow: 0 0 0 8px transparent;
+      color: #212121;
+      border-radius: 12px;
+    }
+
+    .animated-button:hover .arr-1 {
+      right: -25%;
+    }
+
+    .animated-button:hover .arr-2 {
+      left: 16px;
+    }
+
+    .animated-button:hover .text {
+      transform: translateX(12px);
+    }
+
+    .animated-button:hover svg {
+      fill: #212121;
+    }
+
+    .animated-button:active {
+      scale: 0.95;
+      box-shadow: 0 0 0 2px crimson;
+    }
+
+    .animated-button:hover .circle {
+      width: 220px;
+      height: 220px;
+      opacity: 1;
     }
   }
 }
