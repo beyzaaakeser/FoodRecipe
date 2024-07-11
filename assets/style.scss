@@ -20,6 +20,10 @@ body {
   margin: auto;
 }
 
+.d-none {
+  display: none;
+}
+
 .header {
   margin-top: 10px !important;
   display: flex;
@@ -86,6 +90,7 @@ body {
     height: 100%;
 
     .hero-image {
+      flex: 1 0 35%;
       width: 500px;
       height: 500px;
       display: flex;
@@ -112,13 +117,13 @@ body {
   }
 
   .hero-recipe {
-    width: 100%;
     background: #ffffff9d;
     padding: 30px;
     border-radius: 5px;
     padding: 0 30px;
+    flex: 1 0 65%;
     h3 {
-      margin-bottom: 20px;
+      margin-bottom: 10px;
       font-size: 30px;
 
       color: crimson;
@@ -212,7 +217,7 @@ body {
     }
 
     .animated-button:hover {
-      box-shadow: 0 0 0 8px transparent;
+      box-shadow: 0 0 0 4px transparent;
       color: #212121;
       border-radius: 12px;
     }
@@ -242,6 +247,15 @@ body {
       width: 220px;
       height: 220px;
       opacity: 1;
+    }
+  }
+
+  .ingredients-info {
+    padding: 10px 30px 30px 30px;
+    ul {
+      li {
+        padding-bottom: 5px;
+      }
     }
   }
 }
