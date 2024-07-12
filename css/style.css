@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-  max-width: 80%;
+  max-width: 80vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -73,6 +73,7 @@ body {
 }
 
 .hero {
+  width: 100%;
   overflow: hidden;
   display: flex;
   flex-direction: column;
@@ -85,6 +86,7 @@ body {
 .hero .hero-container {
   display: flex;
   height: 100%;
+  width: 100%;
 }
 .hero .hero-container .hero-image {
   flex: 1 0 35%;

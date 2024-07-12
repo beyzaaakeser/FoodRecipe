@@ -25,36 +25,9 @@ async function fetchRandomRecipe() {
 // Call the function
 fetchRandomRecipe();
 
-/* showDayRecipe = (data) => {
-
-  dayTitle.innerHTML = data.meals[0].strMeal;
-  dayDescription.innerHTML = data.meals[0].strInstructions;
-  heroImg.src = data.meals[0].strMealThumb;
-  dayCountry.innerHTML = data.meals[0].strArea;
-  dayCategory.innerHTML = data.meals[0].strCategory;
-
-  ingredients.addEventListener('click', () => {
-
-    dayDescription.parentElement.classList = 'd-none';
-    console.log(data);
-    let ulEl = document.createElement('ul');
-    for (let i = 1; i <= 20; i++) {
-      const ingredient = data.meals[0][`strIngredient${i}`];
-
-      if (ingredient !== null && ingredient !== '') {
-        const listItem = document.createElement('li');
-        listItem.textContent = ingredient;
-        ulEl.appendChild(listItem);
-      }
-    }
-    console.log(ulEl);
-    ingredientsInfo.appendChild(ulEl);
-
-  });
-};
- */
-
 const showDayRecipe = (data) => {
+  let id = data.meals[0].idMeal;
+  instructions.setAttribute('data-showId', id);
   dayTitle.innerHTML = data.meals[0].strMeal;
   dayDescription.innerHTML = data.meals[0].strInstructions;
   heroImg.src = data.meals[0].strMealThumb;
@@ -88,3 +61,10 @@ const showDayRecipe = (data) => {
     }
   });
 };
+
+instructions.addEventListener('click', (e) => {
+  const val = e.target.closest('.instructions');
+  const showId = val.dataset.showid;
+ // location.href = `detail.html?id=${showId}`;
+  window.open(`detail.html?id=${showId}`, '_blank');
+});
