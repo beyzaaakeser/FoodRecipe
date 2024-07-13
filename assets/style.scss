@@ -132,7 +132,7 @@ body {
     p {
       display: -webkit-box;
       -webkit-box-orient: vertical;
-      -webkit-line-clamp: 5;
+      -webkit-line-clamp: 4;
       overflow: hidden;
       text-overflow: ellipsis;
       padding-right: 30px;
@@ -256,6 +256,56 @@ body {
     ul {
       li {
         padding-bottom: 5px;
+      }
+    }
+  }
+}
+
+
+.detail-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 30px;
+  h2{
+    font-size: 35px;
+    font-family: 'Playwrite AT', cursive;
+  }
+  .bx{
+    font-size: 55px;
+    color: crimson;
+  }
+}
+
+.detail-container {
+
+
+  .detail {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+
+    .detail-title {
+      text-transform: uppercase;
+      color: crimson;
+      text-align: center;
+      width: 100%;
+    }
+
+    .detail-img {
+      min-width: 500px;
+      overflow: hidden;
+      img {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        width: 350px;
+        height: 350px;
+        object-fit: cover;
+        object-position: center center;
       }
     }
   }

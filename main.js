@@ -65,6 +65,6 @@ const showDayRecipe = (data) => {
 instructions.addEventListener('click', (e) => {
   const val = e.target.closest('.instructions');
   const showId = val.dataset.showid;
- // location.href = `detail.html?id=${showId}`;
+  // location.href = `detail.html?id=${showId}`;
   window.open(`detail.html?id=${showId}`, '_blank');
 });

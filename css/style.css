@@ -130,7 +130,7 @@ body {
 .hero .hero-recipe p {
   display: -webkit-box;
   -webkit-box-orient: vertical;
-  -webkit-line-clamp: 5;
+  -webkit-line-clamp: 4;
   overflow: hidden;
   text-overflow: ellipsis;
   padding-right: 30px;
@@ -237,4 +237,49 @@ body {
 }
 .hero .ingredients-info ul li {
   padding-bottom: 5px;
+}
+
+.detail-logo {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  left: 30px;
+  top: 30px;
+}
+.detail-logo h2 {
+  font-size: 35px;
+  font-family: "Playwrite AT", cursive;
+}
+.detail-logo .bx {
+  font-size: 55px;
+  color: crimson;
+}
+
+.detail-container .detail {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.detail-container .detail .detail-title {
+  text-transform: uppercase;
+  color: crimson;
+  text-align: center;
+  width: 100%;
+}
+.detail-container .detail .detail-img {
+  min-width: 500px;
+  overflow: hidden;
+}
+.detail-container .detail .detail-img img {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  width: 350px;
+  height: 350px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center center;
+     object-position: center center;
 }/*# sourceMappingURL=style.css.map */
