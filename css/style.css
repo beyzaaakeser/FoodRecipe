@@ -4,12 +4,23 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Exo 2", sans-serif;
+  scroll-behavior: smooth;
+  scroll-padding-top: 3rem;
   text-decoration: none;
 }
 
 body {
   background-color: #ffffff;
   color: rgb(83, 83, 83);
+}
+
+html::-webkit-scrollbar {
+  width: 0.5rem;
+  background: transparent;
+}
+
+html::-webkit-scrollbar-thumb {
+  background: crimson;
 }
 
 .container {
@@ -294,7 +305,7 @@ body {
   max-width: 70%;
   height: auto;
   display: block;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
@@ -302,21 +313,31 @@ body {
 }
 
 .detail-info h1 {
-  font-size: 40px;
+  font-size: 45px;
   color: crimson;
   font-family: "Playwrite AT", cursive;
   margin-top: 10px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 .detail-info .recipe-information {
   display: flex;
   gap: 200px;
-  margin-top: 30px;
+  margin-top: 20px;
+  line-height: 25px;
 }
 .detail-info .recipe-information h2 {
   margin-bottom: 10px;
+  font-size: 30px;
 }
 .detail-info .recipe-information ul {
   list-style: none;
+  padding: 0;
+}
+.detail-info .recipe-information ul li {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  text-transform: capitalize;
 }
 .detail-info .recipe-information p {
   padding-right: 150px;
@@ -333,4 +354,42 @@ body {
   display: flex;
   flex-direction: column;
   gap: 30px;
+}
+.recipe-links .links p {
+  box-shadow: rgba(20, 20, 20, 0.1) 0px 4px 12px;
+}
+.recipe-links .links h2 {
+  margin: 15px 0;
+  font-size: 30px;
+}
+.recipe-links .links .source-a {
+  color: rgb(83, 83, 83);
+  font-size: 20px;
+  margin-top: 50px;
+}
+.recipe-links .links .source-a .bx {
+  color: crimson;
+  font-weight: bold;
+}
+
+footer {
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: crimson;
+  font-size: 18px;
+  border-top: 1px solid;
+  padding: 20px;
+}
+footer a {
+  color: #fff;
+  text-decoration: none;
+  font-style: italic;
+  text-transform: uppercase;
+  font-size: 20px;
+}
+footer a:hover {
+  color: rgb(83, 83, 83);
+  transition: 0.5s;
 }/*# sourceMappingURL=style.css.map */
