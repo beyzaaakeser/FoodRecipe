@@ -60,4 +60,15 @@ const showRecipeDetails = (meal) => {
   }
 };
 
-
+// Scrollreveal Animation
+const animate = ScrollReveal({
+    origin: 'top',
+    distance: '70px',
+    duration: '1500',
+    delay: '400',
+  });
+  
+  animate.reveal('.detail-img img');
+  animate.reveal('.ingredientList', { origin: 'left', duration: '2500' });
+  animate.reveal('.instructionList', { origin: 'right', duration: '2500'});
+  animate.reveal('.video p', { origin: 'top', duration: '2500' , delay : "2000" });
