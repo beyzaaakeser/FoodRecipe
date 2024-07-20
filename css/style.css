@@ -310,6 +310,7 @@ html::-webkit-scrollbar-thumb {
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+  border-radius: 10px;
 }
 
 .detail-info h1 {
