@@ -68,3 +68,14 @@ instructions.addEventListener('click', (e) => {
   // location.href = `detail.html?id=${showId}`;
   window.open(`detail.html?id=${showId}`, '_blank');
 });
+
+
+// Scrollreveal Animation
+const animate = ScrollReveal({
+  origin: 'top',
+  distance: '70px',
+  duration: '2000',
+  delay: '300',
+});
+
+animate.reveal('.hero-container');
