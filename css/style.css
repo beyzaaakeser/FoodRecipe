@@ -239,47 +239,98 @@ body {
   padding-bottom: 5px;
 }
 
-.detail-logo {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
+.logo-section {
   position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(172, 172, 172, 0.1);
+  z-index: 1000;
+  display: flex;
   align-items: center;
-  justify-content: center;
-  left: 30px;
-  top: 30px;
 }
-.detail-logo h2 {
+.logo-section .detail-logo {
+  display: flex;
+  align-items: center;
+}
+.logo-section .detail-logo .logo {
+  font-size: 24px;
+  color: #333;
+  margin-right: 10px;
+}
+.logo-section .detail-logo h2 {
   font-size: 35px;
+  margin: 0;
   font-family: "Playwrite AT", cursive;
 }
-.detail-logo .bx {
+.logo-section .detail-logo .bx {
   font-size: 55px;
   color: crimson;
 }
 
+.detail-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 100px;
+  width: 100%;
+}
 .detail-container .detail {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 100%;
-}
-.detail-container .detail .detail-title {
-  text-transform: uppercase;
-  color: crimson;
-  text-align: center;
-  width: 100%;
+  justify-content: center;
 }
 .detail-container .detail .detail-img {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   min-width: 500px;
+  min-height: auto;
   overflow: hidden;
 }
 .detail-container .detail .detail-img img {
+  max-width: 70%;
+  height: auto;
+  display: block;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  width: 350px;
-  height: 350px;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center center;
      object-position: center center;
+}
+
+.detail-info h1 {
+  font-size: 40px;
+  color: crimson;
+  font-family: "Playwrite AT", cursive;
+  margin-top: 10px;
+}
+.detail-info .recipe-information {
+  display: flex;
+  gap: 200px;
+  margin-top: 30px;
+}
+.detail-info .recipe-information h2 {
+  margin-bottom: 10px;
+}
+.detail-info .recipe-information ul {
+  list-style: none;
+}
+.detail-info .recipe-information p {
+  padding-right: 150px;
+}
+
+.recipe-links {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-top: 50px;
+}
+.recipe-links .links {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }/*# sourceMappingURL=style.css.map */

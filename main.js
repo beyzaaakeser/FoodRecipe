@@ -25,7 +25,7 @@ async function fetchRandomRecipe() {
 // Call the function
 fetchRandomRecipe();
 
-const showDayRecipe = (data) => {
+export const showDayRecipe = (data) => {
   let id = data.meals[0].idMeal;
   instructions.setAttribute('data-showId', id);
   dayTitle.innerHTML = data.meals[0].strMeal;
