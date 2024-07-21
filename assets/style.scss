@@ -14,12 +14,12 @@ body {
   color: rgb(83, 83, 83);
 }
 
-html::-webkit-scrollbar{
+html::-webkit-scrollbar {
   width: 0.5rem;
   background: transparent;
 }
 
-html::-webkit-scrollbar-thumb{
+html::-webkit-scrollbar-thumb {
   background: crimson;
 }
 
@@ -327,7 +327,8 @@ html::-webkit-scrollbar-thumb{
         max-width: 70%;
         height: auto;
         display: block;
-        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+        box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+          rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
         object-fit: cover;
         object-position: center center;
         border-radius: 10px;
@@ -383,11 +384,11 @@ html::-webkit-scrollbar-thumb{
     flex-direction: column;
     gap: 30px;
 
-    p{
+    p {
       box-shadow: rgba(20, 20, 20, 0.1) 0px 4px 12px;
     }
 
-    h2{
+    h2 {
       margin: 15px 0;
       font-size: 30px;
     }
@@ -397,7 +398,7 @@ html::-webkit-scrollbar-thumb{
       font-size: 20px;
       margin-top: 50px;
 
-      .bx{
+      .bx {
         color: crimson;
         font-weight: bold;
       }
@@ -405,15 +406,14 @@ html::-webkit-scrollbar-thumb{
   }
 }
 
-
 footer {
   margin-top: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color:crimson;
+  background-color: crimson;
   font-size: 18px;
-  border-top: 1px solid ;
+  border-top: 1px solid;
   padding: 20px;
 
   a {
@@ -422,9 +422,778 @@ footer {
     font-style: italic;
     text-transform: uppercase;
     font-size: 20px;
-    &:hover{
+    &:hover {
       color: rgb(83, 83, 83);
-      transition: .5s;
+      transition: 0.5s;
+    }
+  }
+}
+
+/**************************************************************/
+
+@media (min-width: 775px) {
+  .hero {
+    max-width: 95vw;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    h2 {
+      margin: 30px 0;
+      font-size: 35px;
+      color: rgb(73, 73, 73);
+    }
+    .hero-container {
+      display: flex;
+      height: 100%;
+      width: 100%;
+      .hero-image {
+        flex: 1;
+        width: 450px;
+        height: 450px;
+        display: flex;
+        position: relative;
+        &::before {
+          content: '';
+          display: block;
+          width: 200px;
+          height: 200px;
+          background-color: crimson;
+          border-radius: 10px;
+          position: absolute;
+          z-index: -1;
+        }
+        .hero-img {
+          height: 90%;
+          object-fit: cover;
+          object-position: center center;
+          border-radius: 10px 100px 10px 10px;
+          margin-left: 25px;
+          margin-top: 25px;
+        }
+      }
+    }
+
+    .hero-recipe {
+      flex: 1;
+      background: #ffffff9d;
+      padding: 30px;
+      border-radius: 5px;
+      padding: 0 30px;
+      flex: 1 0 65%;
+      h3 {
+        margin-bottom: 10px;
+        font-size: 30px;
+
+        color: crimson;
+      }
+      p {
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-right: 30px;
+        line-height: 2rem;
+        font-size: 18px;
+      }
+    }
+
+    .day-info {
+      display: flex;
+      gap: 50px;
+      margin: 30px 0;
+      font-weight: 500;
+      div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        .bx {
+          font-size: 20px;
+          color: crimson;
+        }
+      }
+    }
+
+    .day-buttons {
+      display: flex;
+      gap: 30px;
+
+      .animated-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        padding: 8px 36px;
+        border: 4px solid;
+        border-color: transparent;
+        font-size: 16px;
+        background-color: inherit;
+        border-radius: 100px;
+        font-weight: 500;
+        color: rgb(73, 73, 73);
+        box-shadow: 0 0 0 1px crimson;
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .animated-button svg {
+        position: absolute;
+        width: 24px;
+        fill: crimson;
+        z-index: 9;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .animated-button .arr-1 {
+        right: 16px;
+      }
+
+      .animated-button .arr-2 {
+        left: -25%;
+      }
+
+      .animated-button .circle {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 20px;
+        height: 20px;
+        background-color: crimson;
+        border-radius: 50%;
+        opacity: 0;
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .animated-button .text {
+        position: relative;
+        z-index: 1;
+        transform: translateX(-12px);
+        transition: all 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+      }
+
+      .animated-button:hover {
+        box-shadow: 0 0 0 4px transparent;
+        color: #212121;
+        border-radius: 12px;
+      }
+
+      .animated-button:hover .arr-1 {
+        right: -25%;
+      }
+
+      .animated-button:hover .arr-2 {
+        left: 16px;
+      }
+
+      .animated-button:hover .text {
+        transform: translateX(12px);
+      }
+
+      .animated-button:hover svg {
+        fill: #212121;
+      }
+
+      .animated-button:active {
+        scale: 0.95;
+        box-shadow: 0 0 0 2px crimson;
+      }
+
+      .animated-button:hover .circle {
+        width: 220px;
+        height: 220px;
+        opacity: 1;
+      }
+    }
+
+    .ingredients-info {
+      padding: 10px 30px 30px 30px;
+      ul {
+        li {
+          padding-bottom: 5px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 770px) {
+  .hero {
+    h2 {
+      font-size: 42px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 759px;
+      max-height: 1100px;
+      .hero-image {
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 750px;
+        height: 750px;
+        &::before {
+          content: '';
+          display: block;
+          width: 290px;
+          height: 290px;
+          background-color: crimson;
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transform: translate(45%);
+        }
+
+        .hero-img {
+          height: 55% !important;
+          width: 55% !important;
+          border-radius: 5px 70px 5px 5px;
+          object-fit: cover;
+        }
+      }
+
+      .hero-recipe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1 0 60%;
+        padding: 0;
+        h3 {
+          font-size: 40px;
+          text-transform: capitalize;
+        }
+
+        .day-info {
+          display: flex;
+          gap: 10px;
+          margin: 20px 0;
+          font-size: 24px;
+        }
+
+        #day-description {
+          padding: 0 !important;
+          text-align: start;
+          font-size: 24px;
+        }
+
+        .day-buttons {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 30px;
+          justify-content: start;
+          margin-left: 2px;
+          .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 10px 28px !important;
+            border: 2px solid;
+            border-color: transparent;
+            font-size: 14px !important;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 700;
+            color: rgb(73, 73, 73);
+            box-shadow: 0 0 0 1px crimson;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+            .text {
+              transform: translateX(0) !important;
+            }
+
+            .arr-1,
+            .arr-2 {
+              display: none !important;
+            }
+
+            &:hover .text {
+              transform: translateX(0) !important;
+            }
+          }
+        }
+
+        .ingredients-info {
+          display: block;
+          width: 100%;
+          max-height: 200px; /* İçeriğin taşmasını engellemek için max-height ekledik */
+          overflow-y: auto; /* İçeriğin taşmasını engellemek için dikey kaydırma ekledik */
+          margin: 10px 0; /* Üstten biraz boşluk bıraktık */
+          border-radius: 5px; /* Köşeleri yuvarladık */
+          margin-bottom: 10px;
+          padding: 0 !important;
+          font-size: 20px;
+          ::-webkit-scrollbar {
+            display: none; /* Webkit tabanlı tarayıcılarda scrollbar'ı gizler */
+          }
+          -ms-overflow-style: none; /* Internet Explorer'da scrollbar'ı gizler */
+          scrollbar-width: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  header {
+    justify-content: center !important;
+    width: 95% !important;
+
+    .logo-container {
+      margin: auto !important;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      .logo {
+        i {
+          font-size: 50px !important;
+        }
+      }
+      h2 {
+        font-size: 32px !important;
+      }
+    }
+
+    .search-form {
+      display: none !important;
+    }
+  }
+
+  .hero {
+    h2 {
+      font-size: 38px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 699px;
+      max-height: 1000px;
+      .hero-image {
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 650px;
+        height: 650px;
+        &::before {
+          content: '';
+          display: block;
+          width: 270px;
+          height: 270px;
+          background-color: crimson;
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transform: translate(45%);
+        }
+
+        .hero-img {
+          height: 55% !important;
+          width: 55% !important;
+          border-radius: 5px 70px 5px 5px;
+          object-fit: cover;
+        }
+      }
+
+      .hero-recipe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1 0 60%;
+        padding: 0;
+        h3 {
+          font-size: 35px;
+          text-transform: capitalize;
+        }
+
+        .day-info {
+          display: flex;
+          gap: 10px;
+          margin: 20px 0;
+          font-size: 20px;
+        }
+
+        #day-description {
+          padding: 0 !important;
+          text-align: start;
+          font-size: 22px;
+        }
+
+        .day-buttons {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 30px;
+          justify-content: start;
+          margin-left: 2px;
+          .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 24px !important;
+            border: 2px solid;
+            border-color: transparent;
+            font-size: 12px !important;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 600;
+            color: rgb(73, 73, 73);
+            box-shadow: 0 0 0 1px crimson;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+            .text {
+              transform: translateX(0) !important;
+            }
+
+            .arr-1,
+            .arr-2 {
+              display: none !important;
+            }
+
+            &:hover .text {
+              transform: translateX(0) !important;
+            }
+          }
+        }
+
+        .ingredients-info {
+          display: block;
+          width: 100%;
+          max-height: 200px; /* İçeriğin taşmasını engellemek için max-height ekledik */
+          overflow-y: auto; /* İçeriğin taşmasını engellemek için dikey kaydırma ekledik */
+          margin: 10px 0; /* Üstten biraz boşluk bıraktık */
+          border-radius: 5px; /* Köşeleri yuvarladık */
+          margin-bottom: 10px;
+          padding: 0 !important;
+          font-size: 20px;
+          ::-webkit-scrollbar {
+            display: none; /* Webkit tabanlı tarayıcılarda scrollbar'ı gizler */
+          }
+          -ms-overflow-style: none; /* Internet Explorer'da scrollbar'ı gizler */
+          scrollbar-width: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  header {
+    justify-content: center !important;
+    width: 95% !important;
+
+    .logo-container {
+      margin: auto !important;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 22px !important;
+      }
+    }
+
+    .search-form {
+      display: none !important;
+    }
+  }
+
+  .hero {
+    h2 {
+      font-size: 32px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 499px;
+      max-height: 900px;
+      .hero-image {
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 550px;
+        height: 550px;
+        &::before {
+          content: '';
+          display: block;
+          width: 250px;
+          height: 250px;
+          background-color: crimson;
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transform: translate(45%);
+        }
+
+        .hero-img {
+          height: 55% !important;
+          width: 55% !important;
+          border-radius: 5px 70px 5px 5px;
+          object-fit: cover;
+        }
+      }
+
+      .hero-recipe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1 0 60%;
+        padding: 0;
+        h3 {
+          font-size: 30px;
+          text-transform: capitalize;
+        }
+
+        .day-info {
+          display: flex;
+          gap: 10px;
+          margin: 20px 0;
+        }
+
+        #day-description {
+          padding: 0 !important;
+          text-align: start;
+        }
+
+        .day-buttons {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 30px;
+          justify-content: start;
+          margin-left: 3px;
+          .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 20px !important;
+            border: 2px solid;
+            border-color: transparent;
+            font-size: 12px !important;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 600;
+            color: rgb(73, 73, 73);
+            box-shadow: 0 0 0 1px crimson;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+            .text {
+              transform: translateX(0) !important;
+            }
+
+            .arr-1,
+            .arr-2 {
+              display: none !important;
+            }
+
+            &:hover .text {
+              transform: translateX(0) !important;
+            }
+          }
+        }
+
+        .ingredients-info {
+          display: block;
+          width: 100%;
+          max-height: 200px; /* İçeriğin taşmasını engellemek için max-height ekledik */
+          overflow-y: auto; /* İçeriğin taşmasını engellemek için dikey kaydırma ekledik */
+          margin: 10px 0; /* Üstten biraz boşluk bıraktık */
+          border-radius: 5px; /* Köşeleri yuvarladık */
+          margin-bottom: 10px;
+          padding: 0 !important;
+          font-size: 18px;
+          ::-webkit-scrollbar {
+            display: none; /* Webkit tabanlı tarayıcılarda scrollbar'ı gizler */
+          }
+          -ms-overflow-style: none; /* Internet Explorer'da scrollbar'ı gizler */
+          scrollbar-width: none;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 380px) {
+  body {
+    height: 100vh;
+  }
+  header {
+    justify-content: center !important;
+    width: 95% !important;
+
+    .logo-container {
+      margin: auto !important;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+
+      h2 {
+        font-size: 18px !important;
+      }
+    }
+
+    .search-form {
+      display: none !important;
+    }
+  }
+
+  .hero {
+    h2 {
+      font-size: 26px;
+    }
+
+    .hero-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+      max-width: 400px;
+      max-height: 800px;
+      .hero-image {
+        flex: 1 0 40%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        width: 450px;
+        height: 450px;
+        &::before {
+          content: '';
+          display: block;
+          width: 200px;
+          height: 200px;
+          background-color: crimson;
+          border-radius: 5px;
+          position: absolute;
+          z-index: -1;
+          top: 0;
+          left: 0;
+          transform: translate(45%);
+        }
+
+        .hero-img {
+          height: 55% !important;
+          width: 55% !important;
+          border-radius: 5px 70px 5px 5px;
+          object-fit: cover;
+        }
+      }
+
+      .hero-recipe {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        flex: 1 0 60%;
+        padding: 0;
+        h3 {
+          font-size: 24px;
+          text-transform: capitalize;
+        }
+
+        .day-info {
+          display: flex;
+          gap: 10px;
+          margin: 20px 0;
+        }
+
+        #day-description {
+          padding: 0 !important;
+          text-align: start;
+        }
+
+        .day-buttons {
+          display: flex;
+          gap: 10px;
+          width: 100%;
+          margin-bottom: 30px;
+          justify-content: start;
+          margin-left: 3px;
+          .animated-button {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding: 8px 20px !important;
+            border: 2px solid;
+            border-color: transparent;
+            font-size: 12px !important;
+            background-color: inherit;
+            border-radius: 100px;
+            font-weight: 500;
+            color: rgb(73, 73, 73);
+            box-shadow: 0 0 0 1px crimson;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+
+            .text {
+              transform: translateX(0) !important;
+            }
+
+            .arr-1,
+            .arr-2 {
+              display: none !important;
+            }
+
+            &:hover .text {
+              transform: translateX(0) !important;
+            }
+          }
+        }
+
+        .ingredients-info {
+          display: block;
+          width: 100%;
+          max-height: 200px; /* İçeriğin taşmasını engellemek için max-height ekledik */
+          overflow-y: auto; /* İçeriğin taşmasını engellemek için dikey kaydırma ekledik */
+          margin: 10px 0; /* Üstten biraz boşluk bıraktık */
+          border-radius: 5px; /* Köşeleri yuvarladık */
+          margin-bottom: 10px;
+          padding: 0 !important;
+          ::-webkit-scrollbar {
+            display: none; /* Webkit tabanlı tarayıcılarda scrollbar'ı gizler */
+          }
+          -ms-overflow-style: none; /* Internet Explorer'da scrollbar'ı gizler */
+          scrollbar-width: none;
+        }
+      }
     }
   }
 }

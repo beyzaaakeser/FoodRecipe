@@ -26,6 +26,7 @@ async function fetchRandomRecipe() {
 fetchRandomRecipe();
 
 export const showDayRecipe = (data) => {
+
   let id = data.meals[0].idMeal;
   instructions.setAttribute('data-showId', id);
   dayTitle.innerHTML = data.meals[0].strMeal;
@@ -33,6 +34,7 @@ export const showDayRecipe = (data) => {
   heroImg.src = data.meals[0].strMealThumb;
   dayCountry.innerHTML = data.meals[0].strArea;
   dayCategory.innerHTML = data.meals[0].strCategory;
+  dayType.innerHTML = data.meals[0].strTags;
 
   ingredients.addEventListener('click', () => {
     dayDescription.parentElement.classList = 'd-none';
